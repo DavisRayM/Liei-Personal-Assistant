@@ -12,9 +12,15 @@ def main():
     """
     saying = listen('Welcome to the Test Zone. What can i help you with ?')
 
-    print(saying)
-    speak('You said. ' + saying)
+    speech_array = saying.split(" ")
 
+    # Lowercase the entire array
+    words = [word.lower() for word in speech_array]
+
+    if 'retry' in words:
+        saying = listen('What else do you want me to do ?')
+    if 'good' and 'bye' in words:
+        speak('Goodbye User')
 
 if __name__ == "__main__":
     main()

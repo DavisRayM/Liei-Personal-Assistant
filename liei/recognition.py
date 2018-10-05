@@ -33,7 +33,7 @@ def recognize_speech(audio):
     r = sr.Recognizer()
 
     try:
-        translation = r.recognize_sphinx(audio)
+        translation = r.recognize_google(audio)
         return translation
     except sr.UnknownValueError:
         speak("I did not quite get what you said.... Can you say that again ?")
