@@ -2,8 +2,8 @@
 Main Davios Module
 Contains the main loop for Davios
 """
-from davios.speech import speak
-from davios.recognition import listen
+from speech import speak  # pylint: disable=import-error
+from recognition import listen  # pylint: disable=import-error
 
 
 def main():

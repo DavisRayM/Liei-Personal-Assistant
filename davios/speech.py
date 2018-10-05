@@ -14,3 +14,4 @@ def speak(message: str):
     tts = gTTS(message)
     tts.save("speech.mp3")
     os.system("mpg321 -q speech.mp3")
+    os.remove("speech.mp3")

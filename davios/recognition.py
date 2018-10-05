@@ -3,7 +3,7 @@ Module Containing all Recognition Methods for Davios
 """
 import speech_recognition as sr
 
-from davios.speech import speak
+from speech import speak  # pylint: disable=import-error
 
 
 def listen(prompt: str):
